@@ -1,0 +1,42 @@
+pubspec.yaml
+ame: dinar_chat
+description: تطبيق دردشة بسيط
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+
+flutter:
+  uses-material-design: true
+lib/main.dart
+mport 'package:flutter/material.dart';
+
+void main() => runApp(DinarApp());
+
+class DinarApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'دينار - دردشة',
+      home: HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('دينار - دردشة')),
+      body: Center(
+        child: Text('مرحبا بكم في دينار 😊', style: TextStyle(fontSize: 24)),
+      ),
+    );
+  }
+}
